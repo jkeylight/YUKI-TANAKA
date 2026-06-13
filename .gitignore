@@ -1,0 +1,25 @@
+# OS files
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Node modules (if used for tooling)
+node_modules/
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+.tmp/
