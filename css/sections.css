@@ -1,0 +1,267 @@
+/* =============================================
+   SCENE 01 — THE ARRIVAL (NAME)
+============================================= */
+.scene-name {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.name-container {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.name-jp {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    margin-bottom: 1rem;
+    opacity: 0;
+}
+
+.name-en {
+    font-size: 0.6rem;
+    letter-spacing: 0.4em;
+    opacity: 0.7; /* INCREASED FOR CLARITY */
+}
+
+/* =============================================
+   SCENE 02 — THE THOUGHT (PROLOGUE)
+============================================= */
+.scene-prologue {
+    min-height: 150vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10vh 0;
+}
+
+.prologue-image-wrapper {
+    width: 70vw;
+    max-width: 800px;
+    overflow: hidden;
+}
+
+.prologue-img {
+    width: 100%;
+    opacity: 0;
+}
+
+.prologue-label {
+    margin-top: 2rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    opacity: 0.7; /* INCREASED FOR CLARITY */
+}
+
+/* =============================================
+   SCENE 03 — ONE AT A TIME (GALLERY)
+============================================= */
+.scene-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-panel {
+    height: 140vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.gallery-img {
+    max-width: 70vw;
+    max-height: 75vh;
+    object-fit: contain;
+    opacity: 0;
+    will-change: transform, opacity, filter;
+}
+
+.gallery-label {
+    margin-top: 2rem;
+    font-size: 0.55rem;
+    letter-spacing: 0.2em;
+    opacity: 0.6; /* INCREASED FOR CLARITY */
+}
+
+/* =============================================
+   SCENE 04 — THE VOICE (PASSAGE)
+============================================= */
+.scene-passage {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 10vh 2rem;
+}
+
+.passage-content {
+    text-align: center;
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+}
+
+.passage-text {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    line-height: 1.8;
+    color: var(--ink);
+    opacity: 0.9; /* INCREASED FOR CLARITY */
+}
+
+.passage-location {
+    margin-top: 3rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    opacity: 0.7; /* INCREASED FOR CLARITY */
+}
+
+.passage-watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(6rem, 15vw, 14rem);
+    opacity: 0.04;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* =============================================
+   SCENE 05 — THE MEMORY (ARCHIVE)
+============================================= */
+.scene-archive {
+    min-height: 100vh;
+    position: relative;
+    padding: 15vh 10vw;
+    overflow: hidden;
+}
+
+.archive-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: 0;
+}
+
+.archive-list {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.archive-item {
+    display: grid;
+    grid-template-columns: 3rem 1fr 4rem 5rem;
+    gap: 2rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    transition: color 0.4s var(--ease);
+    color: var(--ink); /* EXPLICIT COLOR FOR CLARITY */
+}
+
+.archive-item:hover {
+    color: var(--sumi);
+}
+
+.archive-num {
+    opacity: 0.5;
+}
+
+.archive-brand {
+    font-weight: 500;
+}
+
+.archive-season, .archive-city {
+    text-align: right;
+    opacity: 0.7;
+}
+
+/* =============================================
+   SCENE 06 — THE ABSENCE (CONTACT)
+============================================= */
+.scene-contact {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10vh 2rem;
+}
+
+.contact-title {
+    font-size: 0.75rem;
+    letter-spacing: 0.4em;
+    margin-bottom: 3rem;
+    opacity: 0.5;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 0.75rem;
+    opacity: 0.8; /* INCREASED FOR CLARITY */
+}
+
+.contact-details a:hover {
+    opacity: 1;
+}
+
+/* =============================================
+   SCENE 07 — THE DEPARTURE (END CARD)
+============================================= */
+.scene-end {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.end-name {
+    font-size: clamp(8rem, 20vw, 16rem);
+    opacity: 0.04;
+    user-select: none;
+}
+
+/* =============================================
+   MOBILE RESPONSIVE
+============================================= */
+@media (max-width: 1000px) {
+    .gallery-panel {
+        height: 125vh;
+    }
+    .gallery-img {
+        max-width: 85vw;
+    }
+    .archive-item {
+        grid-template-columns: 2.5rem 1fr 3rem;
+        font-size: 0.65rem;
+        gap: 1rem;
+    }
+    .archive-city {
+        display: none;
+    }
+    .name-jp {
+        font-size: clamp(3rem, 18vw, 6rem);
+    }
+}

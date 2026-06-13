@@ -1,0 +1,849 @@
+XV. IMAGE COLLECTION — COMPLETE PROMPTS
+
+ Yuki Tanaka, a striking Japanese supermodel with sharp angular bone structure, high defined cheekbones, narrow elongated monolid eyes, and pale porcelain skin with visible natural texture and pores. She has shoulder-length sleek black hair pulled back tightly. Her expression is profoundly still, minimal, and observant, acting as a blank canvas. She is standing perfectly still in the center of a vast, empty traditional Japanese tatami room at dawn. Soft morning light filters through shoji paper screens, creating diffused illumination and long quiet shadows. She wears a simple, deconstructed black Issey Miyake pleated dress that drapes elegantly over her lean, elongated frame. Hands resting naturally at her sides. Shot on 50mm lens for intimate proximity. Sumi-e monochrome palette. Deep rich blacks in her hair and dress contrasting with warm paper-white highlights on the screens. Heavy visible film grain texture, raw intimacy mixed with ethereal softness. Museum-quality editorial fashion portrait, the emptiness of the room mirrors the stillness of her presence.
+Negative Prompt:
+color photography, vibrant colors, neon, instagram aesthetic, influencer, commercial fashion, beauty campaign, perfect skin, plastic skin, cgi, 3d render, cartoon, anime, oversaturated, lens flare, floating particles, random smoke, watermark, text, logo, extra fingers, distorted anatomy, ai generated look, glossy skin, fashion ecommerce, warm golden tones, cool blue tones, heavy makeup, smiling, dynamic pose.
+Recommended Parameters (if using Midjourney):
+--ar 3:4 --style raw --v 6.0
+
+
+
+IMAGE SPECIFICATIONS
+
+Section	Images	Dimensions	Aspect	File Target
+Hero (background ghost)	1	1200 × 1600	3:4	< 500KB
+Prologue	1	1000 × 1300	10:13	< 300KB
+Gallery 01–10	10	1200 × 1600	3:4	< 350KB each
+Campaign 01–04	4	1400 × 1000	7:5	< 400KB each
+Archive backgrounds 01–08	8	1200 × 900	4:3	< 250KB each
+
+Total: 24 imagesFormat: AVIF → WebP → JPEG fallback
+
+
+PHOTOGRAPHER DNA
+Araki Nobuyoshi (intimacy + rawness)
++
+Paolo Roversi (ethereal softness)
++
+Daido Moriyama (grain + contrast)
+
+
+Meaning: raw intimacy, soft light, high grain, the beauty of imperfection, the snapshot that becomes art
+
+
+LENS DOCTRINE
+50mm — closer, more intimate than Maren Kael's 85mm. This is about proximity, not distance.
+
+
+COLOR DOCTRINE
+Sumi-e Monochrome
+
+Deep rich blacks
+Warm paper-white highlights
+Visible grain throughout
+NOT silver — this is ink on paper
+Occasional warm tone bleeding in like aged photography
+
+NEGATIVE PROMPT
+color photography,
+vibrant colors,
+neon,
+instagram aesthetic,
+influencer,
+commercial fashion,
+beauty campaign,
+perfect skin,
+plastic skin,
+cgi,
+3d render,
+cartoon,
+anime,
+oversaturated,
+lens flare,
+floating particles,
+random smoke,
+watermark,
+text,
+logo,
+extra fingers,
+distorted anatomy,
+ai generated look,
+glossy skin,
+fashion ecommerce,
+warm golden tones,
+cool blue tones
+
+
+
+HERO IMAGE
+hero_01.jpg — 1200 × 1600px
+
+
+YUKI TANAKA standing alone in a vast empty traditional Japanese tatami room,
+
+
+morning light filtering through shoji paper screens creating soft diffused illumination,
+
+
+she stands perfectly still in the center of the room,
+
+
+wearing a simple black Issey Miyake pleated dress,
+
+
+hands at her sides,
+
+
+looking directly at camera with minimal expression,
+
+
+her reflection barely visible in the polished wooden floor,
+
+
+sumi-e monochrome palette,
+
+
+deep blacks in her hair and dress,
+
+
+warm paper-white highlights on the shoji screens,
+
+
+visible film grain texture throughout,
+
+
+50mm lens,
+
+
+intimate distance despite the large space,
+
+
+the tatami lines on the floor create geometric rhythm,
+
+
+Paolo Roversi ethereal softness,
+
+
+Daido Moriyama grain,
+
+
+museum-quality fashion portrait,
+
+
+the emptiness of the room mirrors the stillness of her presence
+
+
+
+PROLOGUE IMAGE
+prologue_01.jpg — 1000 × 1300px
+
+
+close-up of YUKI TANAKA's hands resting on a smooth river stone,
+
+
+her fingers long and angular,
+
+
+barely touching the surface,
+
+
+a single thin silver ring on one finger,
+
+
+the stone is dark and wet,
+
+
+sumi-e monochrome,
+
+
+extreme shallow depth of field,
+
+
+50mm lens,
+
+
+visible skin texture with minimal retouching,
+
+
+subtle film grain,
+
+
+Paolo Roversi intimacy,
+
+
+the image should feel like a meditation object,
+
+
+minimalist still life with human presence
+
+
+
+GALLERY SERIES
+
+gallery_01.jpg — 1200 × 1600px
+YUKI TANAKA photographed from behind,
+
+
+standing at the threshold of a massive sliding door,
+
+
+looking into a dark empty room beyond,
+
+
+her silhouette framed by the doorframe,
+
+
+wearing an oversized white linen coat,
+
+
+sumi-e monochrome,
+
+
+strong contrast between the bright corridor and the dark room,
+
+
+50mm lens,
+
+
+visible grain,
+
+
+the threshold is the subject — the space between here and there,
+
+
+Daido Moriyama compositional instinct
+
+
+gallery_02.jpg — 1200 × 1600px
+YUKI TANAKA seated on the floor of an empty concrete gallery space,
+
+
+legs folded beneath her in seiza position,
+
+
+wearing a structured black wool jacket over nothing,
+
+
+direct gaze into camera,
+
+
+single overhead light creating a pool of illumination around her,
+
+
+everything outside the light pool is deep shadow,
+
+
+sumi-e monochrome,
+
+
+50mm lens,
+
+
+extreme negative space,
+
+
+the smallness of her figure in the vast space is the point,
+
+
+fashion meets contemplation
+
+
+gallery_03.jpg — 1200 × 1600px
+YUKI TANAKA in motion — walking through a long traditional Japanese garden corridor,
+
+
+captured mid-stride,
+
+
+the motion blur is intentional at 1/15th shutter speed,
+
+
+her face is sharp but her moving limbs blur slightly,
+
+
+wearing a long black pleated skirt that fans with movement,
+
+
+sumi-e monochrome,
+
+
+50mm lens,
+
+
+heavy grain from the slow shutter,
+
+
+the blur IS the beauty,
+
+
+Araki Nobuyoshi snapshot energy,
+
+
+this is the only image with visible motion — all others are still
+
+
+gallery_04.jpg — 1200 × 1600px
+extreme close-up of YUKI TANAKA's face,
+
+
+from chin to forehead,
+
+
+eyes closed,
+
+
+the texture of her skin is the subject — visible pores, fine lines, realness,
+
+
+a single strip of soft light crosses her closed eyelids,
+
+
+sumi-e monochrome,
+
+
+50mm macro-adjacent distance,
+
+
+the most intimate portrait in the collection,
+
+
+NO retouching visible,
+
+
+this is a face, not a product,
+
+
+Paolo Roversi portrait mastery
+
+
+gallery_05.jpg — 1200 × 1600px
+YUKI TANAKA standing behind a rain-covered window,
+
+
+her hand pressed flat against the glass from inside,
+
+
+the viewer is outside looking in,
+
+
+her face is partially obscured by water droplets on the glass,
+
+
+the distortion creates abstraction,
+
+
+sumi-e monochrome,
+
+
+50mm lens,
+
+
+heavy atmospheric grain,
+
+
+the barrier between observer and subject is literal and physical,
+
+
+Peter Lindbergh melancholy filtered through Japanese restraint
+
+
+gallery_06.jpg — 1200 × 1600px
+YUKI TANAKA lying on a traditional futon on a tatami floor,
+
+
+viewed from directly above (bird's eye),
+
+
+her body creates a straight line,
+
+
+arms at her sides,
+
+
+wearing a simple white cotton shift,
+
+
+the tatami grid surrounds her,
+
+
+sumi-e monochrome,
+
+
+50mm from above,
+
+
+the geometry of the tatami vs the organic line of her body,
+
+
+she could be sleeping or existing,
+
+
+the ambiguity is intentional
+
+
+gallery_07.jpg — 1200 × 1600px
+YUKI TANAKA in a traditional Japanese bathhouse corridor,
+
+
+steam partially obscuring the space,
+
+
+she walks away from camera,
+
+
+seen through the steam as a dark silhouette,
+
+
+wearing nothing but a draped dark cloth,
+
+
+sumi-e monochrome,
+
+
+heavy atmospheric grain,
+
+
+50mm lens,
+
+
+the steam creates natural diffusion,
+
+
+the image is more atmosphere than portrait,
+
+
+Moriyama's raw documentary energy
+
+
+gallery_08.jpg — 1200 × 1600px
+YUKI TANAKA's reflection in still water,
+
+
+she stands at the edge of a stone basin in a temple garden,
+
+
+the water shows her face looking down,
+
+
+her actual face is in shadow above,
+
+
+the reflection is clearer than the real figure,
+
+
+sumi-e monochrome,
+
+
+50mm lens,
+
+
+the reflection is the portrait, not the person,
+
+
+duality and impermanence — water will ripple and the image will disappear,
+
+
+Japanese philosophical concept made visual
+
+
+gallery_09.jpg — 1200 × 1600px
+YUKI TANAKA standing inside a completely empty white gallery room,
+
+
+she is the only object in the space,
+
+
+wearing a deconstructed white Comme des Garcons garment,
+
+
+she nearly disappears into the white walls,
+
+
+only her black hair and the subtle shadows of the garment define her,
+
+
+sumi-e monochrome but nearly all white,
+
+
+50mm lens,
+
+
+she becomes part of the architecture,
+
+
+negative space as subject,
+
+
+the most extreme minimalism in the collection
+
+
+gallery_10.jpg — 1200 × 1600px
+YUKI TANAKA photographed through layers of translucent fabric,
+
+
+multiple sheer curtains between camera and subject,
+
+
+each layer adds diffusion and blur,
+
+
+she is barely visible — a suggestion of a figure,
+
+
+sumi-e monochrome,
+
+
+50mm lens,
+
+
+extreme atmospheric grain,
+
+
+this is the most abstract image in the collection,
+
+
+the last editorial image should feel like a fading memory,
+
+
+Paolo Roversi at his most ethereal
+
+
+
+CAMPAIGN SERIES
+
+campaign_01.jpg — 1400 × 1000px
+YUKI TANAKA walking through the nave of an empty modern Japanese museum,
+
+
+long concrete corridor with clerestory windows,
+
+
+she walks away from camera,
+
+
+wearing a structured black coat,
+
+
+the perspective lines converge on her figure,
+
+
+sumi-e monochrome,
+
+
+50mm lens,
+
+
+Tadao Ando architecture as fashion backdrop,
+
+
+the scale makes her small but the composition makes her the focus
+
+
+campaign_02.jpg — 1400 × 1000px
+YUKI TANAKA seated at a low traditional Japanese table,
+
+
+a single ceramic tea bowl before her,
+
+
+she holds the bowl with both hands,
+
+
+looking down at it,
+
+
+wearing a dark minimal Issey Miyake ensemble,
+
+
+sumi-e monochrome,
+
+
+warm natural side light from a shoji screen,
+
+
+50mm lens,
+
+
+the ritual of tea as fashion context,
+
+
+stillness as campaign energy,
+
+
+this image should make the viewer want to be silent
+
+
+campaign_03.jpg — 1400 × 1000px
+YUKI TANAKA standing at the edge of a vast empty Tokyo rooftop at dawn,
+
+
+the city skyline barely visible through morning fog behind her,
+
+
+she faces away from camera looking at the city,
+
+
+wearing a flowing black dress that the wind lifts slightly at the hem,
+
+
+sumi-e monochrome with the fog creating natural white space,
+
+
+50mm lens,
+
+
+she is small against the enormous sky,
+
+
+the city is her backdrop but her stillness dominates it
+
+
+campaign_04.jpg — 1400 × 1000px
+YUKI TANAKA in a Kyoto bamboo forest,
+
+
+bamboo stalks creating vertical rhythm around her,
+
+
+she stands perfectly still while everything around her suggests movement (slight wind blur on bamboo leaves),
+
+
+wearing a long minimal white dress — the only white garment in the entire collection,
+
+
+sumi-e monochrome,
+
+
+50mm lens,
+
+
+heavy atmospheric grain,
+
+
+she is the one still point in a moving world,
+
+
+the image reverses the collection's usual darkness — this one breathes light
+
+
+
+ARCHIVE SERIES
+
+archive_01.jpg — 1200 × 900px
+contact sheet of YUKI TANAKA's first casting photographs,
+
+
+4 frames arranged in a 2×2 grid with film borders visible,
+
+
+sumi-e monochrome,
+
+
+film scan texture with slight yellowing at edges,
+
+
+she is younger here, more uncertain,
+
+
+the rawness of potential before it becomes profession
+
+
+archive_02.jpg — 1200 × 900px
+a lookbook spread on a wooden table,
+
+
+pages showing YUKI TANAKA in various garments,
+
+
+someone's hand turning the page,
+
+
+sumi-e monochrome,
+
+
+the printed grain of the lookbook visible,
+
+
+meta-document — fashion documenting fashion,
+
+
+natural window light creating soft shadows across the pages
+
+
+archive_03.jpg — 1200 × 900px
+garment rack in a Tokyo atelier,
+
+
+all black garments carefully spaced on wooden hangers,
+
+
+a label tied to one hanger reads a name in Japanese characters,
+
+
+sumi-e monochrome,
+
+
+natural light from a window creating long shadows from the hangers,
+
+
+the collection before it becomes public,
+
+
+the archive as anticipation
+
+
+archive_04.jpg — 1200 × 900px
+YUKI TANAKA backstage,
+
+
+seated on a simple wooden chair,
+
+
+a makeup artist's hands visible at the edge of frame touching her face minimally,
+
+
+she looks at something off-camera with no expression,
+
+
+sumi-e monochrome,
+
+
+available backstage light — fluorescent mixed with daylight,
+
+
+the private moment, unposed,
+
+
+documentary fashion photography
+
+
+archive_05.jpg — 1200 × 900px
+Polaroid photographs scattered on a dark surface,
+
+
+3-4 Polaroids of YUKI TANAKA during model tests,
+
+
+slightly curled edges,
+
+
+the warm yellow-brown cast that Polaroids naturally have,
+
+
+handwritten Japanese text on the white border of one,
+
+
+sumi-e monochrome with warm archive cast,
+
+
+the physical artifact of a career beginning
+
+
+archive_06.jpg — 1200 × 900px
+YUKI TANAKA being measured by a tailor in a Paris couture atelier,
+
+
+measuring tape across her shoulders,
+
+
+she stands straight, looking forward,
+
+
+the tailor is partially visible, focused on the measurement,
+
+
+pins held between the tailor's lips,
+
+
+sumi-e monochrome,
+
+
+natural atelier light,
+
+
+the craft behind the image,
+
+
+intimate professional moment
+
+
+archive_07.jpg — 1200 × 900px
+empty runway after a show has ended,
+
+
+chairs still in rows,
+
+
+the white runway floor reflecting overhead lights,
+
+
+no people,
+
+
+sumi-e monochrome,
+
+
+the space after the event,
+
+
+the ghost of the performance,
+
+
+beautiful in its emptiness
+
+
+archive_08.jpg — 1200 × 900px
+a handwritten note on thin Japanese washi paper,
+
+
+elegant brush-written Japanese characters,
+
+
+the ink has bled slightly into the paper fibers,
+
+
+a few dried ink droplets,
+
+
+sumi-e monochrome but with the natural warm tone of aged paper,
+
+
+the note's content is not fully legible — it's a feeling, not information,
+
+
+the most abstract archive image,
+
+
+the personal artifact that tells you nothing and everything
+
+
+
+XVI. MASTER IMAGE TABLE
+
+ID	Filename	Dimensions (px)	Section
+1	hero_01.jpg	1200 × 1600	Name ghost background
+2	prologue_01.jpg	1000 × 1300	Prologue
+3	gallery_01.jpg	1200 × 1600	Gallery
+4	gallery_02.jpg	1200 × 1600	Gallery
+5	gallery_03.jpg	1200 × 1600	Gallery
+6	gallery_04.jpg	1200 × 1600	Gallery
+7	gallery_05.jpg	1200 × 1600	Gallery
+8	gallery_06.jpg	1200 × 1600	Gallery
+9	gallery_07.jpg	1200 × 1600	Gallery
+10	gallery_08.jpg	1200 × 1600	Gallery
+11	gallery_09.jpg	1200 × 1600	Gallery
+12	gallery_10.jpg	1200 × 1600	Gallery
+13	campaign_01.jpg	1400 × 1000	Campaign
+14	campaign_02.jpg	1400 × 1000	Campaign
+15	campaign_03.jpg	1400 × 1000	Campaign
+16	campaign_04.jpg	1400 × 1000	Campaign
+17	archive_01.jpg	1200 × 900	Archive
+18	archive_02.jpg	1200 × 900	Archive
+19	archive_03.jpg	1200 × 900	Archive
+20	archive_04.jpg	1200 × 900	Archive
+21	archive_05.jpg	1200 × 900	Archive
+22	archive_06.jpg	1200 × 900	Archive
+23	archive_07.jpg	1200 × 900	Archive
+24	archive_08.jpg	1200 × 900	Archive
+
+Total: 24 images
