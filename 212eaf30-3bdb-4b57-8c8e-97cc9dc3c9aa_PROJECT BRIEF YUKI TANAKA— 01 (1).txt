@@ -1,0 +1,1628 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Yes. Every project uses the folder structure.
+
+
+text
+text
+project-name/
+├── index.html
+├── css/
+│   ├── main.css
+│   └── sections.css
+├── js/
+│   ├── app.js
+│   └── [module files per feature]
+└── images/
+    └── [organized by section]
+
+No more single-file builds for anything beyond a style guide sandbox.
+
+OVERRIDE — BUILD STRUCTURE RULE
+Supersedes any single-file instruction in FASHION-SOTD-GRANDMASTER.SKILL.md
+
+
+Version: 1.1
+Effective: Immediately
+Applies to: All future builds — Maren Kael, Yuki Tanaka, and every project after
+
+
+
+RULE
+
+No project ships as a single HTML file.
+
+
+Every project uses separated, maintainable files:
+
+
+text
+text
+project-name/
+├── index.html              ← Structure only. No inline styles. No inline scripts.
+├── css/
+│   ├── main.css            ← Reset, custom properties, shared components, cursor, grain
+│   └── sections.css        ← Section-specific styles, each section clearly marked
+├── js/
+│   ├── app.js              ← Master init. Loads all modules. Registers GSAP plugins.
+│   └── [one file per feature]
+└── images/
+    ├── hero/
+    ├── editorial/
+    ├── runway/
+    ├── campaign/
+    └── archive/
+
+
+FILE RESPONSIBILITIES
+
+index.html
+Semantic HTML only
+Links to css/main.css and css/sections.css
+Links to CDN libraries (GSAP, Lenis, Google Fonts)
+Links to js/app.js at end of body
+Zero<style> tags
+Zero<script> tags (except CDN <script src>)
+
+css/main.css
+CSS reset
+Custom properties (:root)
+Typography base
+Cursor styles
+Grain overlay
+Header / Menu overlay
+Footer
+Mobile global overrides
+Shared animation keyframes
+
+css/sections.css
+Each section clearly marked with a comment block:
+css
+css
+/* =============================================
+   SCENE 01 — THE LIGHT CRACK
+   ============================================= */
+Section-specific layout, spacing, and responsive rules
+Ordered by page flow (top to bottom)
+
+js/app.js
+DOMContentLoaded wrapper
+GSAP registerPlugin(ScrollTrigger)
+Lenis init (with mobile check)
+Calls each module in order:
+js
+js
+initCursor();
+initLoader();
+initHero();
+initScroll();
+No animation logic lives here. It only calls.
+
+js/[module].js
+One function per file
+Each file is self-contained
+No module depends on another module
+Shared state (Lenis instance, GSAP) passed via app.js or accessed via window
+Naming: cursor.js, loader.js, hero.js, scroll.js, editorial.js, filmstrip.js, archive.js, atmosphere.js, marquee.js
+
+
+JAVASCRIPT MODULE PATTERN
+
+Each module file follows this structure:
+
+
+js
+js
+function init[FeatureName]() {
+  // All feature logic here
+  // Uses GSAP, ScrollTrigger, Lenis from global scope (CDN loaded)
+}
+
+// Export for app.js to call
+// If using app.js as the orchestrator:
+// Just define the function globally, app.js calls it
+
+If a project grows complex enough to need state sharing between modules, use a simple namespace:
+
+
+js
+js
+window.MAREN = window.MAREN || {};
+window.MAREN.lenis = lenisInstance; // set in scroll.js
+
+
+IMAGE ORGANIZATION
+
+text
+text
+images/
+├── hero/           ← 1 image max. The North Star.
+├── editorial/      ← 8–12 images. Main gallery.
+├── runway/         ← 5–8 images. Filmstrip or gallery.
+├── campaign/       ← 3–5 images. Full-screen sections.
+└── archive/        ← 5–8 images. Hover/interaction reveals.
+
+Naming convention:{section}_{number}.jpg
+
+hero_01.jpg
+editorial_01.jpg through editorial_08.jpg
+campaign_01.jpg through campaign_04.jpg
+
+Format priority: AVIF → WebP → JPEG fallback
+
+
+
+WHEN A SINGLE HTML FILE IS ALLOWED
+
+Only for:
+
+
+Situation	File
+Style guide sandbox (vibe check)	Single HTML, under 80 lines
+Rapid prototype (testing ONE interaction)	Single HTML, disposable
+Client quick preview	Single HTML, to be replaced
+
+Anything that ships to production uses the full structure. No exceptions.
+
+
+
+WHY THIS MATTERS
+
+Problem	Solution
+Finding one CSS rule in 800 lines	Each concern in its own file
+Disabling one feature without breaking others	Each feature in its own JS module
+Swapping images without touching code	Images in named folders, paths in HTML only
+Client can edit text safely	HTML has no styles or scripts to accidentally break
+Debugging one section	Open sections.css, scroll to the section comment
+Onboarding a new developer	File names tell them where everything is
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PROJECT BRIEF — 01
+YUKI TANAKA
+"THE VOID"
+Complete Production Document
+
+
+I. PROJECT OVERVIEW
+
+Project Name: Yuki Tanaka — The Void
+Type: International Fashion Model Portfolio
+Website Type: Single-page cinematic scroll experience
+Build Type: Single HTML file + image assets
+Language: English with Japanese typographic influence
+Deploy Target: Vercel (static)
+
+
+
+II. MODEL IDENTITY
+
+Name: YUKI TANAKA
+Nationality: Japanese
+Profession: International runway and editorial model
+Base Cities: Tokyo, Paris, New York
+Agency Representation: IMG Models (worldwide)
+Season: Active FW27 and SS28
+
+
+Physical DNA:
+
+East Asian features, specifically Japanese
+Angular bone structure, not soft
+High defined cheekbones
+Narrow elongated eyes with natural monolid
+Pale porcelain complexion
+Lean elongated frame, 178cm
+Shoulder-length black hair, often pulled back tightly
+Minimal expression — the face is a canvas, not a personality
+NOT commercial, NOT influencer, NOT beauty-model
+Editorial face that carries architecture and emptiness equally
+
+Personality DNA:
+
+Quiet beyond necessity
+Observant — she notices everything, says nothing
+Moves through space like water — no wasted motion
+Her stillness is more powerful than most people's movement
+She doesn't perform. She exists. The camera comes to her.
+
+Career Narrative:
+
+Discovered at 17 in a Kyoto ceramics workshop by a visiting Comme des Garcons casting director
+First show: Comme des Garcons FW24 — walked in silence, no music, just her footsteps
+Became known as "the model who makes silence loud"
+Has walked for Issey Miyake, Sacai, Jil Sander, The Row, Maison Margiela
+Editorial work in Vogue Japan, AnOther Magazine, i-D, Dazed
+Known for: the ability to make empty space feel full
+Not known for: social media presence, personality interviews, commercial work
+
+
+III. PROJECT DNA
+
+Emotion: Stillness. The peace of looking at nothing and seeing everything. Like sitting in a zen garden where the rocks are the conversation and the space between them is the meaning.
+
+
+World: A zen temple at dawn. Ink wash painting. Paper screens filtering light. The sound of a single water drop in a stone basin. The space between breaths. Rooms with nothing in them that feel completely full.
+
+
+Archetype: Quiet Luxury (extreme)
+
+
+Audience Fantasy: The person who understands that what's missing is more important than what's present. A curator, an architect, a philosopher of taste. Someone who finds richness in reduction.
+
+
+Transformation: Viewer → Contemplative observer. They arrive expecting a model portfolio. They leave having experienced a meditation on emptiness.
+
+
+North Star Moment: The viewer scrolls through complete white space for what feels too long — just enough to wonder if something is wrong. Then a single image fades into existence so slowly it's almost imperceptible. It arrives like a thought.
+
+
+
+IV. COLOR SYSTEM
+
+css
+css
+:root {
+  --paper: #F5F2ED;      /* warm washi white — DOMINANT */
+  --ink: #1A1A1A;         /* deep charcoal — text */
+  --sumi: #6B6B6B;        /* ink wash grey — secondary */
+  --stone: #9C9A95;       /* temple stone — accents */
+  --void: #FFFFFF;        /* pure white — negative space */
+  --mist: #E8E5E0;        /* light grey — subtle dividers */
+  --breath: #F0EDE8;      /* barely-different white — section shifts */
+}
+
+Palette Logic:
+
+White/cream DOMINATES. The page is 90% negative space.
+Charcoal ink used only for text. Never for decorative elements.
+Sumi grey used for secondary text, labels, subtle lines.
+NO accent color. No gold. No warmth. No coolness. Just absence.
+The "color" of this site is the ABSENCE of color.
+When an image appears, the monochrome photograph is the only source of visual weight.
+
+
+V. TYPOGRAPHY
+
+Display:Noto Serif JP — 200 weight (extra light)
+
+Used for: hero name, section titles, the few words that exist on the page
+At hero scale: clamp(4rem, 12vw, 10rem)
+Letter-spacing: -0.02em
+This font has Japanese character support — some labels appear in Japanese
+
+Body:DM Mono — 300 weight
+
+Used for: captions, labels, navigation, technical information
+At body scale: 0.75rem
+Letter-spacing: 0.2em
+
+Accent:Noto Serif JP — 300 weight, italic
+
+Used for: the rare editorial prose (only one passage exists on the entire site)
+Scale: clamp(1.2rem, 2vw, 1.8rem)
+
+Scale Rules:
+
+Hero name: clamp(4rem, 12vw, 10rem) — deliberately NOT enormous. The restraint IS the statement. Where Maren Kael uses 20vw for impact, Yuki uses 12vw for composure.
+Section labels: 0.55rem / 4px letter-spacing / all caps / DM Mono
+Japanese labels: Noto Serif JP at 0.7rem, no letter-spacing
+
+Typography Behavior:
+
+Text appears with extreme patience — clip-path reveal over 1.2 seconds
+Characters never stagger. The entire word/line appears as one unit. Staggering would be too dramatic for this world.
+Text opacity never exceeds 0.75 — it always feels like it's fading slightly, like ink that hasn't fully dried.
+
+
+VI. SITE ARCHITECTURE
+
+7 scenes. Extreme whitespace between each. The page breathes.
+
+
+
+SCENE 00 — LOADER (THE BRUSHSTROKE)
+
+A white screen. Nothing happens for 1.5 seconds. Then: a single horizontal brushstroke draws itself from left to center. It's not a line — it's a brushstroke: slightly uneven, with varying opacity, like sumi ink on rice paper. It holds for 0.8 seconds, then fades. The site appears behind it as the white screen lifts.
+
+
+Implementation:
+
+SVG path with stroke-dasharray/dashoffset animation
+SVG has stroke-linecap: round and slight opacity variation via gradient
+No text. No numbers. No percentage. Just the stroke.
+
+
+SCENE 01 — NAME (THE ARRIVAL)
+
+Pure white space. Then, from the center of the viewport, her name fades in:
+
+
+text
+text
+田中  雪
+
+YUKI TANAKA
+
+The Japanese characters appear first (Noto Serif JP, 200 weight, clamp(2.5rem, 6vw, 5rem)). Below: the romanized name in DM Mono, 0.6rem, 0.4em letter-spacing, opacity 0.4.
+
+
+Both are centered in the viewport. They hold for 3 seconds. Then they fade to 15% opacity and remain as a ghost in the background as the scroll begins.
+
+
+Why Japanese characters first: It establishes the world before the Western reading pattern kicks in. The viewer must pause, look, read differently. The experience starts with a micro-moment of unfamiliarity.
+
+
+
+SCENE 02 — PROLOGUE (THE THOUGHT)
+
+After scrolling past the name (which has faded to a ghost), the first image appears. But not immediately. There is white space — a lot of it — enough to make the viewer wonder if they've scrolled past everything.
+
+
+Then, slowly, an image fades into existence. It takes 3 seconds to go from invisible to visible. It starts at opacity 0 and arrives at opacity 0.85 — never full opacity. It feels like a memory forming.
+
+
+Below the image, centered, a single line in DM Mono:
+
+
+text
+text
+東京 — パリ — ニューヨーク
+
+(Tokyo — Paris — New York, in Japanese)
+
+
+
+SCENE 03 — THE GALLERY (ONE AT A TIME)
+
+This is the core of the site and where it diverges from every other portfolio.
+
+
+Rule: Only ONE image is ever visible at a time.
+
+
+The gallery is a sequence of full-viewport panels. Each panel contains:
+
+One image (centered, max-width 70vw, max-height 75vh)
+A label below (DM Mono, 0.55rem, opacity 0.3): 001 — COMME DES GARÇONS FW24
+Nothing else
+
+Between each panel: at least 40vh of pure white space. The viewer must scroll through emptiness to reach the next image. This is intentional. The whitespace is not wasted space — it is the space between breaths in a meditation.
+
+
+Scrolling behavior: Lenis at lerp 0.05. This is extremely slow. Every scroll increment feels deliberate. The viewer cannot rush through this site. It enforces contemplation.
+
+
+Image count: 10 editorial images + 4 campaign images + 3 runway groups = 17 total panels.
+
+
+Image animation: Each image enters via a 3-second fade from opacity 0 → 0.85. No clip-path. No scale. No parallax. Just a fade. The simplest possible arrival.
+
+
+
+SCENE 04 — THE PASSAGE (THE VOICE)
+
+After the gallery, the ONLY editorial prose on the entire site. Centered. Noto Serif JP italic.
+
+
+text
+text
+There is a Japanese concept — 間 (ma) —
+the pause between notes
+where the music actually lives.
+
+She is the ma.
+The space between the garment and the viewer.
+The silence that makes the sound mean something.
+
+— Tokyo, before dawn
+
+Below: the character 間 at clamp(6rem, 15vw, 14rem), opacity 0.04, as a background watermark.
+
+
+
+SCENE 05 — THE ARCHIVE (THE MEMORY)
+
+A single-column list. No images visible initially.
+
+
+text
+text
+001    COMME DES GARÇONS    FW24    東京
+002    ISSEY MIYAKE         SS25    東京
+003    SACAI                FW25    パリ
+004    JIL SANDER           SS26    ミラノ
+005    THE ROW              FW26    ニューヨーク
+006    MAISON MARGIELA      HC26    パリ
+007    COMME DES GARÇONS    FW27    東京
+008    SACAI                SS28    パリ
+
+Interaction: On hover of any row, the ENTIRE viewport background transitions to a monochrome image associated with that entry. The image is displayed at opacity 0.15 — barely there, like a watermark. The text remains sharp on top. On mouse leave, the background fades back to white over 1.2 seconds.
+
+
+This is different from Maren Kael's archive (which shows images at full opacity behind a scrim). Yuki's archive barely shows the image. It's a ghost. A suggestion. You have to look hard to see it.
+
+
+
+SCENE 06 — CONTACT (THE ABSENCE)
+
+White space. Then, centered:
+
+
+text
+text
+BOOKINGS
+
+IMG Models Tokyo
+IMG Models Paris
+
+booking@yukitanaka.jp
+
+DM Mono. 0.75rem. Opacity 0.5. Nothing decorative. Nothing more than what's needed.
+
+
+Below, separated by 60vh of white space:
+
+
+
+SCENE 07 — END CARD (THE DEPARTURE)
+
+The viewport is white. Her name appears one final time, centered:
+
+
+text
+text
+田中  雪
+
+At clamp(8rem, 20vw, 16rem). Noto Serif JP 200 weight. Opacity 0.04.
+
+
+Almost invisible. The viewer has to squint. It's there and not there. Like a memory of someone who was never quite present.
+
+
+
+FOOTER
+
+text
+text
+THE VOID
+
+A LOOKBOOK Studio Experience
+© Norman James
+made with love ❤️ by Empathy Studio
+
+At the very bottom. DM Mono. 0.6rem. Opacity 0.25. Barely legible.
+
+
+
+VII. ANIMATION SYSTEM
+
+Element	Animation	Duration	Easing
+Text reveals	clip-path inset(0 0 0 0) from inset(0 0 100% 0)	1.2s	cubic-bezier(0.22, 1, 0.36, 1)
+Image arrival	opacity 0 → 0.85	3s	power1.out
+Archive background	opacity 0 → 0.15	1.2s	power2.inOut
+Name ghost	opacity 1 → 0.15	2s	power1.out
+Brushstroke loader	stroke-dashoffset 0 → full	1.5s	power2.inOut
+Scroll	Lenis lerp 0.05	continuous	—
+
+No stagger animations. Words and lines appear as units.
+No scale animations. Images don't zoom.
+No parallax. Nothing moves at different speeds.
+No rotation. Nothing tilts.
+The only motion is opacity. Everything fades. That's it.
+
+
+
+VIII. SIGNATURE INTERACTION — INK DISSOLUTION
+
+Location: Scene 03 (The Gallery) — each image after it has been visible for 4 seconds.
+
+
+Behavior:
+
+1.Image fades in (3 seconds, opacity 0 → 0.85)
+2.Image holds at 0.85 opacity for the duration of viewport visibility
+3.As the image scrolls OUT of the viewport (bottom edge leaving), instead of simply scrolling away, the image applies:
+filter: blur(0px) → blur(8px) over 1.5 seconds
+Simultaneously: opacity: 0.85 → 0.15
+Simultaneously: a CSS mask gradient appears, making the edges dissolve inward
+4.The effect: the image dissolves like ink dispersing in water. It doesn't leave — it fades into the white page.
+
+Implementation:
+
+GSAP ScrollTrigger with start: "top top" and end: "bottom top" on each image container
+scrub: 1 for smooth scroll-linked animation
+CSS filter blur + opacity + mask-image animated via GSAP
+
+Emotional Effect: Images don't disappear. They dissolve. They become part of the white space. Like memories fading. Like ink in water.
+
+
+
+IX. CURSOR
+
+css
+css
+.cursor-dot { width: 6px; height: 6px; background: var(--ink); border-radius: 50%; }
+.cursor-ring { width: 28px; height: 28px; border: 1px solid rgba(26,26,26,.3); border-radius: 50%; }
+
+Smaller than Maren Kael's cursor. More subtle.
+Black (not gold). This world has no accent color.
+Ring lags at lerp 0.08 (slower, more meditative than Maren's 0.12)
+On interactive elements: ring only grows to 36px (subtle, not dramatic)
+mix-blend-mode: difference
+
+
+X. FILM GRAIN
+
+css
+css
+.grain {
+  position: fixed; inset: 0;
+  pointer-events: none; z-index: 9999;
+  opacity: 0.015;  /* half of Maren Kael's grain */
+  /* same SVG noise texture, same 5-frame drift */
+}
+
+Grain is barely perceptible. It's there to prevent the white from feeling like a blank document. It gives the paper texture — like washi rice paper.
+
+
+
+XI. ATMOSPHERE SHIFT
+
+None. This site does NOT shift from warm to cool. It begins white and ends white. The atmosphere is constant — stillness from start to finish. This is the opposite of Maren Kael's dying-sunset approach.
+
+
+
+XII. MOBILE BEHAVIOR
+
+Element	Desktop	Mobile (≤1000px)
+Cursor	Custom black dot + ring	Hidden
+Lenis	lerp 0.05	Disabled (native scroll)
+Image max-width	70vw	85vw
+Name scale	clamp(4rem, 12vw, 10rem)	clamp(3rem, 18vw, 6rem)
+Whitespace between panels	40vh	25vh
+Archive interaction	Hover background	Tap background (toggles)
+Menu	3-line hamburger	Same
+
+
+XIII. MENU SYSTEM
+
+Trigger: 3 horizontal lines (same as Maren Kael spec)
+
+
+Overlay: Full-screen white (not black). Text in charcoal.
+
+Menu items in Noto Serif JP, clamp(2.5rem, 8vw, 6rem), weight 200
+Numbers in DM Mono, 0.7rem, opacity 0.25
+Hover: text shifts to sumi grey (#6B6B6B). No line animation. No gold accent.
+Cities: 東京 パリ ニューヨーク in Noto Serif JP
+
+Menu items:
+
+text
+text
+01    作品 (WORK)
+02    記録 (ARCHIVE)
+03    予約 (BOOKINGS)
+
+
+XIV. FOOTER TEXT
+
+html
+html
+<footer class="footer">
+  <div class="footer-left">
+    <div class="footer-brand">THE VOID</div>
+    <div class="footer-copy">A LOOKBOOK Studio Experience</div>
+    <div class="footer-copy">&copy; Norman James</div>
+  </div>
+  <div class="footer-right">
+    made with love &hearts; by Empathy Studio
+  </div>
+</footer>
+
+
+XV. IMAGE COLLECTION — COMPLETE PROMPTS
+
+IMAGE SPECIFICATIONS
+
+Section	Images	Dimensions	Aspect	File Target
+Hero (background ghost)	1	1200 × 1600	3:4	< 500KB
+Prologue	1	1000 × 1300	10:13	< 300KB
+Gallery 01–10	10	1200 × 1600	3:4	< 350KB each
+Campaign 01–04	4	1400 × 1000	7:5	< 400KB each
+Archive backgrounds 01–08	8	1200 × 900	4:3	< 250KB each
+
+Total: 24 imagesFormat: AVIF → WebP → JPEG fallback
+
+
+PHOTOGRAPHER DNA
+Araki Nobuyoshi (intimacy + rawness)
++
+Paolo Roversi (ethereal softness)
++
+Daido Moriyama (grain + contrast)
+
+
+Meaning: raw intimacy, soft light, high grain, the beauty of imperfection, the snapshot that becomes art
+
+
+LENS DOCTRINE
+50mm — closer, more intimate than Maren Kael's 85mm. This is about proximity, not distance.
+
+
+COLOR DOCTRINE
+Sumi-e Monochrome
+
+Deep rich blacks
+Warm paper-white highlights
+Visible grain throughout
+NOT silver — this is ink on paper
+Occasional warm tone bleeding in like aged photography
+
+NEGATIVE PROMPT
+color photography,
+vibrant colors,
+neon,
+instagram aesthetic,
+influencer,
+commercial fashion,
+beauty campaign,
+perfect skin,
+plastic skin,
+cgi,
+3d render,
+cartoon,
+anime,
+oversaturated,
+lens flare,
+floating particles,
+random smoke,
+watermark,
+text,
+logo,
+extra fingers,
+distorted anatomy,
+ai generated look,
+glossy skin,
+fashion ecommerce,
+warm golden tones,
+cool blue tones
+
+
+
+HERO IMAGE
+hero_01.jpg — 1200 × 1600px
+
+
+YUKI TANAKA standing alone in a vast empty traditional Japanese tatami room,
+
+
+morning light filtering through shoji paper screens creating soft diffused illumination,
+
+
+she stands perfectly still in the center of the room,
+
+
+wearing a simple black Issey Miyake pleated dress,
+
+
+hands at her sides,
+
+
+looking directly at camera with minimal expression,
+
+
+her reflection barely visible in the polished wooden floor,
+
+
+sumi-e monochrome palette,
+
+
+deep blacks in her hair and dress,
+
+
+warm paper-white highlights on the shoji screens,
+
+
+visible film grain texture throughout,
+
+
+50mm lens,
+
+
+intimate distance despite the large space,
+
+
+the tatami lines on the floor create geometric rhythm,
+
+
+Paolo Roversi ethereal softness,
+
+
+Daido Moriyama grain,
+
+
+museum-quality fashion portrait,
+
+
+the emptiness of the room mirrors the stillness of her presence
+
+
+
+PROLOGUE IMAGE
+prologue_01.jpg — 1000 × 1300px
+
+
+close-up of YUKI TANAKA's hands resting on a smooth river stone,
+
+
+her fingers long and angular,
+
+
+barely touching the surface,
+
+
+a single thin silver ring on one finger,
+
+
+the stone is dark and wet,
+
+
+sumi-e monochrome,
+
+
+extreme shallow depth of field,
+
+
+50mm lens,
+
+
+visible skin texture with minimal retouching,
+
+
+subtle film grain,
+
+
+Paolo Roversi intimacy,
+
+
+the image should feel like a meditation object,
+
+
+minimalist still life with human presence
+
+
+
+GALLERY SERIES
+
+gallery_01.jpg — 1200 × 1600px
+YUKI TANAKA photographed from behind,
+
+
+standing at the threshold of a massive sliding door,
+
+
+looking into a dark empty room beyond,
+
+
+her silhouette framed by the doorframe,
+
+
+wearing an oversized white linen coat,
+
+
+sumi-e monochrome,
+
+
+strong contrast between the bright corridor and the dark room,
+
+
+50mm lens,
+
+
+visible grain,
+
+
+the threshold is the subject — the space between here and there,
+
+
+Daido Moriyama compositional instinct
+
+
+gallery_02.jpg — 1200 × 1600px
+YUKI TANAKA seated on the floor of an empty concrete gallery space,
+
+
+legs folded beneath her in seiza position,
+
+
+wearing a structured black wool jacket over nothing,
+
+
+direct gaze into camera,
+
+
+single overhead light creating a pool of illumination around her,
+
+
+everything outside the light pool is deep shadow,
+
+
+sumi-e monochrome,
+
+
+50mm lens,
+
+
+extreme negative space,
+
+
+the smallness of her figure in the vast space is the point,
+
+
+fashion meets contemplation
+
+
+gallery_03.jpg — 1200 × 1600px
+YUKI TANAKA in motion — walking through a long traditional Japanese garden corridor,
+
+
+captured mid-stride,
+
+
+the motion blur is intentional at 1/15th shutter speed,
+
+
+her face is sharp but her moving limbs blur slightly,
+
+
+wearing a long black pleated skirt that fans with movement,
+
+
+sumi-e monochrome,
+
+
+50mm lens,
+
+
+heavy grain from the slow shutter,
+
+
+the blur IS the beauty,
+
+
+Araki Nobuyoshi snapshot energy,
+
+
+this is the only image with visible motion — all others are still
+
+
+gallery_04.jpg — 1200 × 1600px
+extreme close-up of YUKI TANAKA's face,
+
+
+from chin to forehead,
+
+
+eyes closed,
+
+
+the texture of her skin is the subject — visible pores, fine lines, realness,
+
+
+a single strip of soft light crosses her closed eyelids,
+
+
+sumi-e monochrome,
+
+
+50mm macro-adjacent distance,
+
+
+the most intimate portrait in the collection,
+
+
+NO retouching visible,
+
+
+this is a face, not a product,
+
+
+Paolo Roversi portrait mastery
+
+
+gallery_05.jpg — 1200 × 1600px
+YUKI TANAKA standing behind a rain-covered window,
+
+
+her hand pressed flat against the glass from inside,
+
+
+the viewer is outside looking in,
+
+
+her face is partially obscured by water droplets on the glass,
+
+
+the distortion creates abstraction,
+
+
+sumi-e monochrome,
+
+
+50mm lens,
+
+
+heavy atmospheric grain,
+
+
+the barrier between observer and subject is literal and physical,
+
+
+Peter Lindbergh melancholy filtered through Japanese restraint
+
+
+gallery_06.jpg — 1200 × 1600px
+YUKI TANAKA lying on a traditional futon on a tatami floor,
+
+
+viewed from directly above (bird's eye),
+
+
+her body creates a straight line,
+
+
+arms at her sides,
+
+
+wearing a simple white cotton shift,
+
+
+the tatami grid surrounds her,
+
+
+sumi-e monochrome,
+
+
+50mm from above,
+
+
+the geometry of the tatami vs the organic line of her body,
+
+
+she could be sleeping or existing,
+
+
+the ambiguity is intentional
+
+
+gallery_07.jpg — 1200 × 1600px
+YUKI TANAKA in a traditional Japanese bathhouse corridor,
+
+
+steam partially obscuring the space,
+
+
+she walks away from camera,
+
+
+seen through the steam as a dark silhouette,
+
+
+wearing nothing but a draped dark cloth,
+
+
+sumi-e monochrome,
+
+
+heavy atmospheric grain,
+
+
+50mm lens,
+
+
+the steam creates natural diffusion,
+
+
+the image is more atmosphere than portrait,
+
+
+Moriyama's raw documentary energy
+
+
+gallery_08.jpg — 1200 × 1600px
+YUKI TANAKA's reflection in still water,
+
+
+she stands at the edge of a stone basin in a temple garden,
+
+
+the water shows her face looking down,
+
+
+her actual face is in shadow above,
+
+
+the reflection is clearer than the real figure,
+
+
+sumi-e monochrome,
+
+
+50mm lens,
+
+
+the reflection is the portrait, not the person,
+
+
+duality and impermanence — water will ripple and the image will disappear,
+
+
+Japanese philosophical concept made visual
+
+
+gallery_09.jpg — 1200 × 1600px
+YUKI TANAKA standing inside a completely empty white gallery room,
+
+
+she is the only object in the space,
+
+
+wearing a deconstructed white Comme des Garcons garment,
+
+
+she nearly disappears into the white walls,
+
+
+only her black hair and the subtle shadows of the garment define her,
+
+
+sumi-e monochrome but nearly all white,
+
+
+50mm lens,
+
+
+she becomes part of the architecture,
+
+
+negative space as subject,
+
+
+the most extreme minimalism in the collection
+
+
+gallery_10.jpg — 1200 × 1600px
+YUKI TANAKA photographed through layers of translucent fabric,
+
+
+multiple sheer curtains between camera and subject,
+
+
+each layer adds diffusion and blur,
+
+
+she is barely visible — a suggestion of a figure,
+
+
+sumi-e monochrome,
+
+
+50mm lens,
+
+
+extreme atmospheric grain,
+
+
+this is the most abstract image in the collection,
+
+
+the last editorial image should feel like a fading memory,
+
+
+Paolo Roversi at his most ethereal
+
+
+
+CAMPAIGN SERIES
+
+campaign_01.jpg — 1400 × 1000px
+YUKI TANAKA walking through the nave of an empty modern Japanese museum,
+
+
+long concrete corridor with clerestory windows,
+
+
+she walks away from camera,
+
+
+wearing a structured black coat,
+
+
+the perspective lines converge on her figure,
+
+
+sumi-e monochrome,
+
+
+50mm lens,
+
+
+Tadao Ando architecture as fashion backdrop,
+
+
+the scale makes her small but the composition makes her the focus
+
+
+campaign_02.jpg — 1400 × 1000px
+YUKI TANAKA seated at a low traditional Japanese table,
+
+
+a single ceramic tea bowl before her,
+
+
+she holds the bowl with both hands,
+
+
+looking down at it,
+
+
+wearing a dark minimal Issey Miyake ensemble,
+
+
+sumi-e monochrome,
+
+
+warm natural side light from a shoji screen,
+
+
+50mm lens,
+
+
+the ritual of tea as fashion context,
+
+
+stillness as campaign energy,
+
+
+this image should make the viewer want to be silent
+
+
+campaign_03.jpg — 1400 × 1000px
+YUKI TANAKA standing at the edge of a vast empty Tokyo rooftop at dawn,
+
+
+the city skyline barely visible through morning fog behind her,
+
+
+she faces away from camera looking at the city,
+
+
+wearing a flowing black dress that the wind lifts slightly at the hem,
+
+
+sumi-e monochrome with the fog creating natural white space,
+
+
+50mm lens,
+
+
+she is small against the enormous sky,
+
+
+the city is her backdrop but her stillness dominates it
+
+
+campaign_04.jpg — 1400 × 1000px
+YUKI TANAKA in a Kyoto bamboo forest,
+
+
+bamboo stalks creating vertical rhythm around her,
+
+
+she stands perfectly still while everything around her suggests movement (slight wind blur on bamboo leaves),
+
+
+wearing a long minimal white dress — the only white garment in the entire collection,
+
+
+sumi-e monochrome,
+
+
+50mm lens,
+
+
+heavy atmospheric grain,
+
+
+she is the one still point in a moving world,
+
+
+the image reverses the collection's usual darkness — this one breathes light
+
+
+
+ARCHIVE SERIES
+
+archive_01.jpg — 1200 × 900px
+contact sheet of YUKI TANAKA's first casting photographs,
+
+
+4 frames arranged in a 2×2 grid with film borders visible,
+
+
+sumi-e monochrome,
+
+
+film scan texture with slight yellowing at edges,
+
+
+she is younger here, more uncertain,
+
+
+the rawness of potential before it becomes profession
+
+
+archive_02.jpg — 1200 × 900px
+a lookbook spread on a wooden table,
+
+
+pages showing YUKI TANAKA in various garments,
+
+
+someone's hand turning the page,
+
+
+sumi-e monochrome,
+
+
+the printed grain of the lookbook visible,
+
+
+meta-document — fashion documenting fashion,
+
+
+natural window light creating soft shadows across the pages
+
+
+archive_03.jpg — 1200 × 900px
+garment rack in a Tokyo atelier,
+
+
+all black garments carefully spaced on wooden hangers,
+
+
+a label tied to one hanger reads a name in Japanese characters,
+
+
+sumi-e monochrome,
+
+
+natural light from a window creating long shadows from the hangers,
+
+
+the collection before it becomes public,
+
+
+the archive as anticipation
+
+
+archive_04.jpg — 1200 × 900px
+YUKI TANAKA backstage,
+
+
+seated on a simple wooden chair,
+
+
+a makeup artist's hands visible at the edge of frame touching her face minimally,
+
+
+she looks at something off-camera with no expression,
+
+
+sumi-e monochrome,
+
+
+available backstage light — fluorescent mixed with daylight,
+
+
+the private moment, unposed,
+
+
+documentary fashion photography
+
+
+archive_05.jpg — 1200 × 900px
+Polaroid photographs scattered on a dark surface,
+
+
+3-4 Polaroids of YUKI TANAKA during model tests,
+
+
+slightly curled edges,
+
+
+the warm yellow-brown cast that Polaroids naturally have,
+
+
+handwritten Japanese text on the white border of one,
+
+
+sumi-e monochrome with warm archive cast,
+
+
+the physical artifact of a career beginning
+
+
+archive_06.jpg — 1200 × 900px
+YUKI TANAKA being measured by a tailor in a Paris couture atelier,
+
+
+measuring tape across her shoulders,
+
+
+she stands straight, looking forward,
+
+
+the tailor is partially visible, focused on the measurement,
+
+
+pins held between the tailor's lips,
+
+
+sumi-e monochrome,
+
+
+natural atelier light,
+
+
+the craft behind the image,
+
+
+intimate professional moment
+
+
+archive_07.jpg — 1200 × 900px
+empty runway after a show has ended,
+
+
+chairs still in rows,
+
+
+the white runway floor reflecting overhead lights,
+
+
+no people,
+
+
+sumi-e monochrome,
+
+
+the space after the event,
+
+
+the ghost of the performance,
+
+
+beautiful in its emptiness
+
+
+archive_08.jpg — 1200 × 900px
+a handwritten note on thin Japanese washi paper,
+
+
+elegant brush-written Japanese characters,
+
+
+the ink has bled slightly into the paper fibers,
+
+
+a few dried ink droplets,
+
+
+sumi-e monochrome but with the natural warm tone of aged paper,
+
+
+the note's content is not fully legible — it's a feeling, not information,
+
+
+the most abstract archive image,
+
+
+the personal artifact that tells you nothing and everything
+
+
+
+XVI. MASTER IMAGE TABLE
+
+ID	Filename	Dimensions (px)	Section
+1	hero_01.jpg	1200 × 1600	Name ghost background
+2	prologue_01.jpg	1000 × 1300	Prologue
+3	gallery_01.jpg	1200 × 1600	Gallery
+4	gallery_02.jpg	1200 × 1600	Gallery
+5	gallery_03.jpg	1200 × 1600	Gallery
+6	gallery_04.jpg	1200 × 1600	Gallery
+7	gallery_05.jpg	1200 × 1600	Gallery
+8	gallery_06.jpg	1200 × 1600	Gallery
+9	gallery_07.jpg	1200 × 1600	Gallery
+10	gallery_08.jpg	1200 × 1600	Gallery
+11	gallery_09.jpg	1200 × 1600	Gallery
+12	gallery_10.jpg	1200 × 1600	Gallery
+13	campaign_01.jpg	1400 × 1000	Campaign
+14	campaign_02.jpg	1400 × 1000	Campaign
+15	campaign_03.jpg	1400 × 1000	Campaign
+16	campaign_04.jpg	1400 × 1000	Campaign
+17	archive_01.jpg	1200 × 900	Archive
+18	archive_02.jpg	1200 × 900	Archive
+19	archive_03.jpg	1200 × 900	Archive
+20	archive_04.jpg	1200 × 900	Archive
+21	archive_05.jpg	1200 × 900	Archive
+22	archive_06.jpg	1200 × 900	Archive
+23	archive_07.jpg	1200 × 900	Archive
+24	archive_08.jpg	1200 × 900	Archive
+
+Total: 24 images
+
+
+
+XVII. BUILD STACK
+
+text
+text
+Single HTML file + 24 images
+CSS (inline)
+GSAP CDN (ScrollTrigger)
+Lenis CDN
+Google Fonts: Noto Serif JP + DM Mono
+Vanilla JS
+
+No frameworks. No build tools.
+
+
+
+XVIII. FOLDER STRUCTURE
+
+text
+text
+yuki-tanaka/
+├── index.html
+└── images/
+    ├── hero/
+    │   └── hero_01.jpg
+    ├── editorial/
+    │   ├── gallery_01.jpg
+    │   └── ...through gallery_10.jpg
+    ├── campaign/
+    │   ├── campaign_01.jpg
+    │   └── ...through campaign_04.jpg
+    └── archive/
+        ├── archive_01.jpg
+        └── ...through archive_08.jpg
+
+
+XIX. CSS CUSTOM PROPERTIES (COMPLETE)
+
+css
+css
+:root {
+  --paper: #F5F2ED;
+  --ink: #1A1A1A;
+  --sumi: #6B6B6B;
+  --stone: #9C9A95;
+  --void: #FFFFFF;
+  --mist: #E8E5E0;
+  --breath: #F0EDE8;
+  --line: rgba(26,26,26,0.06);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+XX. WHAT THIS SITE IS NOT
+
+NOT Maren Kael (dark → light, not light → light)
+NOT Bjorn Elsa (no grids, no stats, no quote walls)
+NOT a typical model portfolio (extreme restraint)
+NOT minimalist as aesthetic choice — minimalist as philosophical position
+NOT fast — the slowness is intentional
+NOT empty — the whitespace is full
+
+
+XXI. SUCCESS METRICS
+
+The site succeeds when:
+
+The viewer slows down involuntarily
+The viewer holds their breath when the first image appears
+The viewer understands 間 (ma) without it being explained
+The viewer remembers the white space as much as the images
+The viewer feels they've been somewhere, not just seen something
+
+
+This brief is self-contained. Paste it into any new chat. The new instance will have everything needed to build from zero — DNA, story, architecture, colors, typography, animations, interactions, image prompts with dimensions, CSS values, HTML structure, folder structure, and the philosophical framework holding it all together.
